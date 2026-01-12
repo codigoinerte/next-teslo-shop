@@ -6,9 +6,9 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const productsInCart: Product[] = [
-  initialData.products[0],
-  initialData.products[1],
-  initialData.products[2],
+  // initialData.products[0],
+  // initialData.products[1],
+  // initialData.products[2],
 ]
 
 export default function CartPage() {

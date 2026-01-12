@@ -20,9 +20,9 @@ export const TopMenu = () => {
 
             {/* Center Menu */}
             <div className='hidden sm:flex justify-between items-center flex-1'>
-                <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100 block' href={"/category/men"}>Hombres</Link>
-                <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100 block' href={"/category/women"}>Mujeres</Link>
-                <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100 block' href={"/category/kid"}>Niños</Link>
+                <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100 block' href={"/gender/men"}>Hombres</Link>
+                <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100 block' href={"/gender/women"}>Mujeres</Link>
+                <Link className='m-2 p-2 rounded-md transition-all hover:bg-gray-100 block' href={"/gender/kid"}>Niños</Link>
             </div>
 
             {/* Search cart Menu */}
