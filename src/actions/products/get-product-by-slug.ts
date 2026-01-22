@@ -1,6 +1,7 @@
 "use server"
 
 import { prisma } from "@/lib/prisma";
+import { ValidTypes } from "@/seed/seed";
 
 export const getProductBySlug = async (slug:string) => {
     try {
@@ -11,6 +12,11 @@ export const getProductBySlug = async (slug:string) => {
                     select:{
                         url: true
                     }
+                },
+                category: {
+                    select: {
+                        name: true
+                    }                
                 }
             },
             where:{
@@ -23,6 +29,7 @@ export const getProductBySlug = async (slug:string) => {
         return {
             ...product,
             images: product.ProductImage.map(image => image.url),
+            type: product.category.name.toLowerCase() as ValidTypes
         }
 
     } catch (error) {
