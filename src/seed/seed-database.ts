@@ -12,6 +12,10 @@ const prisma = new PrismaClient({ adapter });
 async function main(){
 
     // Borrar registros previos 
+    await prisma.orderAddress.deleteMany();
+    await prisma.orderItem.deleteMany();
+    await prisma.order.deleteMany();
+    
     await prisma.userAddress.deleteMany();
     await prisma.productImage.deleteMany();
     await prisma.product.deleteMany();
