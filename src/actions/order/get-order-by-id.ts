@@ -42,7 +42,7 @@ export const getOrderById = async (id: string) => {
             image: product.ProductImage[0].url ?? '',
         }));
 
-        console.log(productFormatted);
+        // console.log(productFormatted);
 
         const addressByOrder = await prisma.orderAddress.findUnique({
             include:{

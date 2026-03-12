@@ -9,7 +9,7 @@ export async function authenticate(
 ) {
      try {
         // await sleep(2);
-        console.log(Object.fromEntries(formData));
+        // console.log(Object.fromEntries(formData));
 
         await signIn('credentials', {
             ...Object.fromEntries(formData),

@@ -89,7 +89,7 @@ export const useCartStore = create<State>()(
                 removeProduct:(product:CartProduct) => {
                     const { cart } = get();
 
-                    console.log(cart);
+                    // console.log(cart);
 
                     const filteredProduct = cart.filter(
                         (item) => (item.id !== product.id || item.size !== product.size)

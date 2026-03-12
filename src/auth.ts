@@ -24,7 +24,7 @@ const authenticatedRoutes =[
             return token;
         },
         session: ({session, token, user}) => {
-            console.log({session,token,user});
+            // console.log({session,token,user});
             
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             session.user = token.data as any;
@@ -32,7 +32,7 @@ const authenticatedRoutes =[
             return session;
         },
         authorized({auth, request: {nextUrl}}) {
-            console.log(auth);
+            // console.log(auth);
             const isLoggedIn = !!auth?.user;
             const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
             if(isOnDashboard){
